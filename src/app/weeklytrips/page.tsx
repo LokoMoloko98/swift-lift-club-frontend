@@ -1,6 +1,6 @@
 'use client';
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
+import Header from "@/components/layout/Header";
+import Sidebar from "@/components/layout/Sidebar";
 import { Box, CssBaseline } from "@mui/material";
 
 export default function WeeklyTripsPage() {
@@ -11,7 +11,8 @@ export default function WeeklyTripsPage() {
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Header />
-          {/* Weekly trips content */}
+          <Sidebar />
+          Weekly trips content
         </Box>
       </Box>
     </>

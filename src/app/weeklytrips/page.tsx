@@ -4,7 +4,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import { Box, CssBaseline } from "@mui/material";
 
 export default function WeeklyTripsPage() {
-  return (
+  return ( 
     <>
       <CssBaseline />
       <Box sx={{ display: "flex" }}>

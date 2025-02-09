@@ -1,13 +1,11 @@
 "use client"
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Import usePathname
 import { useEffect, useState } from "react";
 import { logout, getUser } from "@/app/auth/hooks";
 import { FaHome, FaCalculator, FaRoute, FaSignOutAlt } from "react-icons/fa";
 
 export default function Sidebar() {
   const [user, setUser] = useState<any>(null);
-  const pathname = usePathname(); // Get current route
 
   useEffect(() => {
     checkUser();
@@ -25,50 +23,27 @@ export default function Sidebar() {
   if (!user) return null;
 
   return (
-    <aside className="bg-gray-900 text-white w-64 min-h-screen flex flex-col shadow-lg">
-      <div className="p-6">
-        <h2 className="text-2xl font-semibold text-gray-100">Swift Lift Club</h2>
-      </div>
-      <nav className="flex-1 px-2 py-4">
-        <div className="space-y-2">
-          <Link
-            href="/dashboard"
-            className={`flex items-center space-x-3 p-3 rounded-md hover:bg-gray-800 transition-colors ${
-              pathname === "/dashboard" ? 'bg-gray-800 text-blue-400' : 'text-gray-300'
-            }`}
-          >
-            <FaHome className="h-5 w-5" />
-            <span>Dashboard</span>
-          </Link>
-          <Link
-            href="/fares"
-            className={`flex items-center space-x-3 p-3 rounded-md hover:bg-gray-800 transition-colors ${
-              pathname === "/fares" ? 'bg-gray-800 text-blue-400' : 'text-gray-300'
-            }`}
-          >
-            <FaCalculator className="h-5 w-5" />
-            <span>Fare Calculator</span>
-          </Link>
-          <Link
-            href="/weeklytrips"
-            className={`flex items-center space-x-3 p-3 rounded-md hover:bg-gray-800 transition-colors ${
-              pathname === "/weeklytrips" ? 'bg-gray-800 text-blue-400' : 'text-gray-300'
-            }`}
-          >
-            <FaRoute className="h-5 w-5" />
-            <span>Weekly Trips</span>
-          </Link>
-        </div>
+    <aside className="bg-gray-800 text-white w-64 h-screen p-5 flex flex-col">
+      <h2 className="text-xl font-bold mb-6">Swift Lift Club</h2>
+      <nav className="flex-1 space-y-4">
+        <Link href="/dashboard" className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-700">
+          <FaHome /> Dashboard
+        </Link>
+        <Link href="/fare-calculator" className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-700">
+          <FaCalculator /> Fare Calculator
+        </Link>
+        <Link href="/weekly-trips" className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-700">
+          <FaRoute /> Weekly Trips
+        </Link>
       </nav>
-      <div className="p-6 mt-auto">
+      {/* <div className="mt-auto pt-6">
         <button
           onClick={logout}
-          className="flex items-center space-x-3 p-3 rounded-md hover:bg-gray-800 text-gray-300 transition-colors w-full justify-start"
+          className="flex items-center gap-3 p-2 rounded-md bg-red-600 hover:bg-red-700 w-full justify-center"
         >
-          <FaSignOutAlt className="h-5 w-5" />
-          <span>Logout</span>
+          <FaSignOutAlt /> Sign Out
         </button>
-      </div>
+      </div> */}
     </aside>
   );
 }

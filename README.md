@@ -22,7 +22,7 @@ To install the project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/lokomoloko98/swift-lift-club-ui.git
+    git clone https://github.com/lokomoloko98/swift-lift-club-frontend
     ```
 
 2. Navigate to the project directory:
@@ -68,13 +68,13 @@ npm run start
 swift-lift-club-ui/
 ├── app/
 │   ├── components/    # Reusable UI components
-│   ├── fare/         # Fare calculator page
-│   ├── profile/      # Profile page
-│   ├── weeklytrips/  # Weekly trips page
-│   ├── layout.tsx    # Root layout component
-│   └── page.tsx      # Home page
-├── public/           # Static files
-└── package.json      # Project dependencies and scripts
+│   ├── fare/          # Fare calculator page
+│   ├── profile/       # Profile page
+│   ├── weeklytrips/   # Weekly trips page
+│   ├── layout.tsx     # Root layout component
+│   └── page.tsx       # Home page
+├── public/            # Static files
+└── package.json       # Project dependencies and scripts
 ```
 
 ## Technology Stack
@@ -84,24 +84,6 @@ swift-lift-club-ui/
 - [Material-UI](https://mui.com/) - UI Components
 - [Emotion](https://emotion.sh/) - Styling
 
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-branch
-    ```
-3. Make your changes and commit them:
-    ```bash
-    git commit -m "Description of your changes"
-    ```
-4. Push to the branch:
-    ```bash
-    git push origin feature-branch
-    ```
-5. Create a pull request.
 
 ## Scripts
 

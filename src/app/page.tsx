@@ -1,19 +1,12 @@
 'use client';
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import { Box, CssBaseline } from "@mui/material";
 
-export default function HomePage() {
+export default function Dashboard() {
   return (
-    <>
-      <CssBaseline />
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <Header />
-          {/* Dashboard content */}
-        </Box>
-      </Box>
-    </>
-  );
+    <div className="text-center">
+      <h1 className="text-4xl font-bold">Welcome to Swift Lift Club</h1>
+      <p className="mt-4 text-lg text-gray-600">
+        Manage your trips and fares efficiently
+      </p>
+    </div>
+  )
 }

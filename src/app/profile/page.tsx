@@ -1,9 +1,9 @@
 'use client';
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
+import Header from "@/components/layout/Header";
+import Sidebar from "@/components/layout/Sidebar";
 import { Box, CssBaseline } from "@mui/material";
 
-export default function ProfilePage() {
+export default function Profile() {
   return (
     <>
       <CssBaseline />
@@ -11,7 +11,8 @@ export default function ProfilePage() {
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Header />
-          {/* Profile content */}
+          <Sidebar />
+          Profile content
         </Box>
       </Box>
     </>
